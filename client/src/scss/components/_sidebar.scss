@@ -1,0 +1,115 @@
+.sidebar {
+    &__container {
+        float: left;
+        width: 24rem;
+        padding: 4rem;
+        background-color: $sidebar;
+    }
+
+    &__inner {
+        position: fixed;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $menu-link-black;
+
+    &__title {
+        padding-left: 1rem;
+    }
+}
+
+.menu {
+    margin-top: 6rem;
+
+    &__hamburger {
+        display: none;
+    }
+
+    &__item {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: $menu-link-black;
+        padding-top: 4.2rem;
+
+        &:first-child {
+            padding-top: 0rem;
+        }
+
+        &:hover {
+            & svg {
+                stroke: red;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: -4rem;
+            content: "";
+            height: 0;
+            width: 3px;
+            background-color: $menu-link-active;
+            @include transition;
+        }
+
+        &:hover:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 3px;
+            background-color: $menu-link-active;
+        }
+
+        &:hover svg path,
+        &:hover span {
+            @include transition;
+            stroke: $menu-link-active;
+            color: $menu-link-active;
+        }
+
+        &_active {
+            pointer-events: none;
+            & svg path,
+            & span {
+                stroke: $menu-link-active;
+                color: $menu-link-active;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 3px;
+                background-color: $menu-link-active;
+            }
+        }
+
+        & svg {
+            min-width: 2.4rem;
+        }
+
+        & span {
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+}

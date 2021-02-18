@@ -1,0 +1,4 @@
+export const GET_ALL_ITEMS = "GET_ALL_ITEMS ";
+export const REMOVE_ALL_ITEMS = "REMOVE_ALL_ITEMS ";
+export const GET_SEARCH_ITEMS = "GET_SEARCH_ITEMS ";
+export const SET_IS_LOADING = "SET_IS_LOADING ";

@@ -1,0 +1,29 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359 173">
+                    <title>svg arrow with dropshadow</title>
+                    <desc>
+                        An svg example of an arrow shape with a dropshadow
+                        filter applied. The dropshadow filter effect uses
+                        feGaussianBlur, feOffset and feMerge.
+                    </desc>
+                    <defs>
+                        <filter id="dropshadow" height="130%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                            <feOffset dx="0" dy="2" result="offsetblur" />
+                            <feComponentTransfer>
+                                <feFuncA type="linear" slope="0.2" />
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path
+                        filter="url(#dropshadow)"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16 4C10.4772 4 6 8.47715 6 14V78.6534C6.07015 78.6947 6.13747 78.7459 6.20047 78.8077L11.2729 83.7863C11.6722 84.1782 11.6722 84.8216 11.2729 85.2136L6.20047 90.1921C6.13747 90.254 6.07015 90.3052 6 90.3465V155C6 160.523 10.4771 165 16 165H343C348.523 165 353 160.509 353 154.986V90.3465C352.93 90.3052 352.863 90.254 352.8 90.1921L347.727 85.2136C347.328 84.8216 347.328 84.1782 347.727 83.7863L352.8 78.8077C352.863 78.7459 352.93 78.6947 353 78.6534V14.0141C353 8.49122 348.523 4 343 4H16Z"
+                        fill="white"
+
+                    />
+                </svg>

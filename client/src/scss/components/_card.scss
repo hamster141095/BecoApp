@@ -1,0 +1,98 @@
+.card {
+    display: block;
+    margin: 1rem;
+    overflow: hidden;
+    width: 34.7rem;
+    cursor: pointer;
+
+    &__wrapper {
+        height: 16.1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    &__info {
+        padding: 1.6rem 0 1.6rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 16px;
+        font-style: normal;
+    }
+
+    &__title {
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $cart-title;
+        font-family: "Roboto";
+        padding-bottom: 0.6rem;
+    }
+
+    &__description {
+        font-family: "Roboto";
+        font-weight: normal;
+        color: $cart-desc;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__num {
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 28px;
+        color: $cart-number;
+        padding-bottom: 0.6rem;
+    }
+
+    &__label {
+        font-family: "Roboto";
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: $cart-desc;
+    }
+
+    &__image {
+        width: 13rem;
+
+        clip-path: polygon(
+            0% 3%,
+            90% 3%,
+            95.5% 8%,
+            95.5% 46%,
+            90.3% 50%,
+            94.5% 54%,
+            95.5% 92%,
+            91% 98.5%,
+            0% 98.5%
+        );
+    }
+}
+
+.fade-appear {
+    transform: translateY(50px);
+    transition: all 500ms ease-out;
+    opacity: 0;
+}
+.fade-appear-active {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 500ms ease-out;
+}
+.fade-appear-done {
+    transform: translateY(0px);
+    opacity: 1;
+
+    transition: all 500ms ease-out;
+}

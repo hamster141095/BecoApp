@@ -1,0 +1,56 @@
+.header {
+    &__inner {
+        margin: 4rem 6rem;
+    }
+    &__title {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+        color: $header-title;
+        margin-bottom: 3rem;
+        opacity: 1;
+        height: 100%;
+        width: 100%;
+        @include transition;
+        &_hide {
+            transform: translateY(-100px);
+            opacity: 0;
+            @include transition;
+        }
+    }
+}
+
+.search {
+    &__inner {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        position: relative;
+        border: 1px solid rgba(51, 51, 51, 0.2);
+        border-radius: 50px;
+        padding: 1.2rem 4.4rem;
+        font-size: 18px;
+        line-height: 26px;
+        font-family: "Open Sans";
+        font-weight: normal;
+
+        &::placeholder {
+            color: $header-input;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 17px;
+        left: 16px;
+    }
+
+    &__clear-btn {
+        position: absolute;
+        top: 16px;
+        right: 13px;
+    }
+}

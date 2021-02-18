@@ -1,0 +1,17 @@
+$black: #000;
+
+$sidebar: #f3f4f9;
+$content: #fafafa;
+
+$menu-link-black: #333333;
+$menu-link-active: #34abe0;
+
+$header-title: rgba(0, 0, 0, 0.85);
+$header-input: rgba(0, 0, 0, 0.45);
+
+$cart-title: #000000;
+$cart-desc: rgba(0, 0, 0, 0.5);
+$cart-number: #df212d;
+@mixin transition {
+    transition: all 0.5s ease;
+}

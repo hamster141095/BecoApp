@@ -1,0 +1,93 @@
+@import "../scss/variables";
+@import "../scss/libs/normalize";
+
+@import "../scss/components/all";
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem 10px
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 144rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: "OpenSans-Regular";
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.aside {
+    background-color: $sidebar;
+    min-height: 100%;
+    z-index: 4;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: $content;
+    width: 100%;
+
+    &__top {
+        width: 100%;
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        @include transition;
+
+        &_transition {
+            transform: translateY(-72px);
+            @include transition;
+        }
+    }
+
+    &__content {
+        background-color: $content;
+        width: 100%;
+        padding: 3rem 4.9rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10rem;
+        margin: 0 auto;
+    }
+}

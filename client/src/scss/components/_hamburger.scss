@@ -1,0 +1,50 @@
+.hamburger {
+    cursor: pointer;
+    z-index: 5;
+    &__inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__item {
+        width: 2.6rem;
+        height: 2px;
+        background: #262626;
+        border-radius: 50px;
+        position: absolute;
+        top: 5rem;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2.6rem;
+            height: 2px;
+            background: #262626;
+            border-radius: 50px;
+        }
+
+        &::before {
+            transform: translateY(-7px);
+        }
+
+        &::after {
+            transform: translateY(7px);
+        }
+
+        &_open {
+            transform: translateX(-5rem);
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            &::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+    }
+}
