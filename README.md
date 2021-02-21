@@ -9,4 +9,5 @@ Second you must go to the client directory and install npm dependence
 
 
 Third in the project directory, you can run:
+### `cd ...`
 ### `npm run dev`
